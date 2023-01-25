@@ -3,7 +3,17 @@ use rand::Rng;
 
 
 fn send_bitcoin() {
-    println!("Hello");
+    println!(\n"We're going to send some Bitcoin!\n);
+
+    let clients = vec!["Don Eladio", "Walt", "Pinkman", "Mike"];
+
+    println!("Who do you want to send Bitcoin?\n");
+    for clients in &clients {
+        println!("{} ", client);
+    }
+    println!("\n");
+
+    
 
 
 }
@@ -13,8 +23,7 @@ fn receive_bitcoin() {
 
     let amount = rand::thread_rng().gen_range(1..=10);
 
-    println!("You've just received {} \n", amount);
-    
+    println!("You've just received {} Bitcoin! \n", amount);
 }
 
 fn exit_console() {
@@ -24,18 +33,20 @@ fn exit_console() {
 
 fn console() {
     println!("\nLets have fun with Bitcoin\n");
-    println!("Do you want to send or receive Bitcoin?\n");
+    println!("Do you want to send (s) or receive (r) Bitcoin?\n");
 
     let mut command = String::new();
 
     io::stdin().read_line(&mut command);
 
     if command.trim().eq("s"){
-        send_bitcoin();
+        send_bitcoin()
     }
     else if command.trim().eq("r")
     {
-        receive_bitcoin();
+        receive_bitcoin()
+    } else {
+        exit_console()
     }
 }
 

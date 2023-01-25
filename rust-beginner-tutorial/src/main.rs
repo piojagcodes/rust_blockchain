@@ -3,17 +3,33 @@ use rand::Rng;
 
 
 fn send_bitcoin() {
-    println!(\n"We're going to send some Bitcoin!\n);
+    println!("\nWe're going to send some Bitcoin!\n");
 
-    let clients = vec!["Don Eladio", "Walt", "Pinkman", "Mike"];
+    let clients = vec!["Eladio", "Walt", "Pinkman", "Mike"];
 
-    println!("Who do you want to send Bitcoin?\n");
+    println!("Who do you want to send Bitcoin?\\n");
     for clients in &clients {
-        println!("{} ", client);
+        println!("{} ", clients);
     }
     println!("\n");
 
-    
+    let mut recipient = String::new();
+    io::stdin().read_line(&mut recipient);
+
+    if clients.contains(&recipient.trim()) {
+        println!("How many Bitcoin do you want to send?\n");
+
+        let mut amount = String::new();
+        io::stdin().read_line(&mut amount);
+
+        println!("\nYou sent {} Bitcoin to {}!\n", amount, recipient.trim());
+
+    } else {
+        println!("{} is not in your contacts!", recipient.trim());
+
+    }
+
+
 
 
 }
@@ -32,7 +48,7 @@ fn exit_console() {
 }
 
 fn console() {
-    println!("\nLets have fun with Bitcoin\n");
+    println!("\nLets have fun with Bitcoin!\n ");
     println!("Do you want to send (s) or receive (r) Bitcoin?\n");
 
     let mut command = String::new();

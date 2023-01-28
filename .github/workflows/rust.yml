@@ -17,7 +17,7 @@ jobs:
       run: choco install rust
     
     - name: Build
-      run: cd rust_blockchain && cargo build --verbose
+      run: cd rust-beginner-tutorial && cargo build --verbose
 
     - name: Test
       run: cargo test --verbose

@@ -1,0 +1,23 @@
+name: Rust
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Rust
+      run: choco install rust
+    
+    - name: Build
+      run: cd rust-beginner-tutorial && cargo build --verbose
+
+    - name: Test
+      run: cargo test --verbose

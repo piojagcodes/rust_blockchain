@@ -1,0 +1,1 @@
+D:\Materiały_do_nauki\rust_examples\rust_blockchain\rust-beginner-tutorial\target\release\rust-beginner-tutorial.exe: D:\Materiały_do_nauki\rust_examples\rust_blockchain\rust-beginner-tutorial\src\main.rs
